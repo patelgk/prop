@@ -23,6 +23,11 @@ export class DhanService {
     return !!(this.clientId && this.accessToken);
   }
 
+  public updateCredentials(clientId: string, accessToken: string) {
+    this.clientId = clientId;
+    this.accessToken = accessToken;
+  }
+
   public async getNiftyQuote(): Promise<{ price: number; change: number } | null> {
     if (!this.isConfigured()) return null;
 

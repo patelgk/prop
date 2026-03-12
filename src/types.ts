@@ -24,11 +24,18 @@ export interface Plan {
   name: string;
   price: number;
   capital: number;
-  profitTarget: number;
-  maxDD: number;
-  dailyDD: number;
+  profit_target: number;
+  max_dd: number;
+  daily_dd: number;
   tag?: string;
   recommended?: boolean;
+}
+
+export interface Rule {
+  id: string;
+  name: string;
+  value: string;
+  description: string;
 }
 
 export interface OptionData {
@@ -54,4 +61,15 @@ export interface Account {
   balance: number;
   initialBalance: number;
   equity: number;
+}
+
+export interface Client {
+  id: string;
+  name: string;
+  email: string;
+  balance: number;
+  initial_balance: number;
+  equity: number;
+  unrealizedPnl: number;
+  openPositions: number;
 }
